@@ -1,0 +1,13 @@
+---
+log_level: debug
+start_every_minutes: 5 # time to sleep between schedule uploads
+
+domino: # schedule download server
+  url: "http://127.0.0.1/db.nsf/doctors_schedule?openagent"
+  raw_schedule_copy_dir: /tmp # optional directory for dumping downloaded schedule
+
+prodoctorov: # schedule upload server
+  filial_name: "OOO HealthCare"
+  url: "https://api.prodoctorov.ru/v2/doctors/send_schedule/"
+  token: "35a322a37e6fb34b2aaea6f4ed30aa7f"
+  upload_data_copy_dir: /tmp # optional directory for dumping prepared to upload schedule

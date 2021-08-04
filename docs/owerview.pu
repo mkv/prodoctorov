@@ -1,0 +1,33 @@
+@startuml
+
+hide footbox
+autonumber
+
+box "Customer Network"
+  participant HIS
+  participant PRODOCTOROV as SRV
+end box
+
+box "Internet"
+  participant api.prodoctorov.ru as WEB
+end box
+
+SRV -> SRV : Start first timer
+... always 5 seconds delay ...
+
+loop
+
+SRV -> HIS : HTTP GET
+SRV <-- HIS : CSV file
+
+SRV -> SRV : Schedule\ntransformation
+
+SRV -> WEB : HTTP POST schedule
+SRV <-- WEB : HTTP 204
+
+SRV -> SRV : Start next timer
+
+... wait timer fires ...
+end
+
+@enduml
