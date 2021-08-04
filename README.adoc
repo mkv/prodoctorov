@@ -1,6 +1,8 @@
 :MODULE: PRODOCTOROV
 
-= {MODULE} image:https://goreportcard.com/badge/github.com/mkv/prodoctorov[] image:https://img.shields.io/github/license/mkv/prodoctorov[GitHub]
+= {MODULE} image:https://goreportcard.com/badge/github.com/mkv/prodoctorov[] image:https://img.shields.io/github/license/mkv/prodoctorov[GitHub] image:https://img.shields.io/github/release/mkv/prodoctorov.svg[]
+
+
 :lang: ru
 
 :appendix-caption: Приложение
